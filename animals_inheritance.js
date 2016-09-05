@@ -1,8 +1,21 @@
 "use strict"
 
-class Animal {
+class SuperPower {
   constructor() {
+  }
 
+  use_lazer_vision() {
+    console.log("LASERRRRR")
+  }
+
+  use_flying(x) {
+    console.log("TERBANG")
+  }
+}
+
+class Animal extends SuperPower {
+  constructor() {
+    super()
   }
 }
 
@@ -33,7 +46,7 @@ class Frog extends Amphibian {
   }
 }
 
-class Bat extends Mammal{
+class Bat extends Mammal {
   constructor() {
     super()
   }
@@ -42,9 +55,9 @@ class Bat extends Mammal{
 class Chimpanzee extends Primate {
   constructor() {
     super()
-    this.use_lazer_vision = true
   }
 }
 
 var monyet = new Chimpanzee()
-console.log(monyet)
+monyet.use_lazer_vision()
+monyet.use_flying()
